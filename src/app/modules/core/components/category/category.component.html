@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-between flex-wrap">
+  <p-card header="{{category.name}}" *ngFor="let category of categories" class="w-22">
+    <ng-template pTemplate="header">
+      <img alt="Card" [src]="'assets/img/'+category.imageUrl" />
+    </ng-template>
+    <p >
+      {{
+        category.description
+      }}
+    </p>
+    <ng-template pTemplate="footer">
+      <div class="d-flex justify-content-end">
+        <p-button (click)="goToCategoryDetail(category.id)" icon="pi pi-eye"></p-button>
+      </div>
+
+    </ng-template>
+  </p-card>
+</div>
+
